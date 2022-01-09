@@ -28,3 +28,16 @@
 .header #add-btn:hover {
     background-color: darkgreen;
 }
+form {
+    display: inline; 
+}
+form input {
+    outline: none;
+    margin-bottom: 10px;
+    height: 40px;
+    border-bottom-width: 1px;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+    border-bottom-width: 1px;
+}
