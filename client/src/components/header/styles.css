@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px 10px 20px 10px;
+    background-color: darkslateblue;
+    margin-bottom: 5px;
+}
+.header #input {
+    width: 84%;
+    height: 40px;
+    border-width: 0.1px;
+    margin-right: 10px;
+    outline: none;
+    padding: 10px;
+}
+.header #add-btn {
+    display: flex;
+    position: relative;
+    background-color: green;
+    cursor: pointer;
+    border: none;
+    height: 40px;
+    width: 16%;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+.header #add-btn:hover {
+    background-color: darkgreen;
+}
