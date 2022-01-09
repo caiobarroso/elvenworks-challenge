@@ -25,10 +25,10 @@ exports.pegarTodosRecursos = async (req, res) => {
 exports.editarRecurso = async (req, res) => {
   try {
     const { id } = req.params;
-    const { nome, data, tipo } = req.body;
+    const { nome_operacao, data_operacao, tipo_operacao } = req.body;
     const editarRecurso = await pool.query(
       "UPDATE information SET nome_operacao = $1, data_operacao = $2, tipo_operacao = $3 WHERE id_operacao = $4",
-      [nome, data, tipo, id]
+      [nome_operacao, data_operacao, tipo_operacao, id]
     );
 
     res.json("atualizado!");
