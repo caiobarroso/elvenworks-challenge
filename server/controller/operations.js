@@ -22,14 +22,6 @@ exports.pegarTodosRecursos = async (req, res) => {
     console.log(e);
   }
 };
-exports.pegarRecursoEspecifico = async (req, res) => {
-  try {
-    const mostrarTodosRecursos = await pool.query("SELECT * from information");
-    res.json(mostrarTodosRecursos.rows);
-  } catch (e) {
-    console.log(e);
-  }
-};
 exports.editarRecurso = async (req, res) => {
   try {
     const { id } = req.params;
