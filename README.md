@@ -50,9 +50,9 @@ $ npm start
 ### 🎲 Configurando banco de dados 
 
 ```bash
-# Acesse o arquivo bd.js
+# Acesse o script de criaçao do banco em database.sql dentro da pasta server
 
-# Vá para a pasta client
+# Copie o script
 $ cd client
 
 # Instale as dependências
