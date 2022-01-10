@@ -1,6 +1,9 @@
 # elvenworks-challenge
 
-- Desafio do link (https://github.com/elvenworks/challenges).
+### Sobre o projeto
+
+Desafio do link (https://github.com/elvenworks/challenges).
+De acordo com a documentação, entendi que era necessário ser feito um CRUD de recursos, em que todas as informaçoes
 
 ### Pré-requisitos
 
