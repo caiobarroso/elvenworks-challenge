@@ -52,8 +52,7 @@ $ npm start
 ### 🎲 Configurando banco de dados 
 
 ```bash
-# Antes de tudo, dentro da pasta server, no arquivo db.js modifique o campo 'password' 
-para a sua senha configurada inicialmente no banco.
+# Antes de tudo, dentro da pasta server, no arquivo db.js modifique o campo 'password' para a sua senha configurada inicialmente no banco.
 
 # Acesse o script de criaçao do banco em database.sql.
 
