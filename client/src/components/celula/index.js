@@ -12,7 +12,7 @@ export default (props) => {
         <h1> {props.data} </h1>
       </div>
       <div className="btn-area">
-        <button id="edit-btn" onClick={props.abrirModal}>
+        <button id="edit-btn">
           <FontAwesomeIcon icon={faEdit} />
         </button>
         <button id="delete-btn" onClick={props.deletarRecurso}>

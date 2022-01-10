@@ -11,6 +11,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+
   const [nome, setNome] = useState("");
   const [tipo, setTipo] = useState("");
   const [data, setData] = useState("");

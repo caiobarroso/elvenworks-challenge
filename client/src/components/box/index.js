@@ -16,17 +16,22 @@ const Box = () => {
   };
 
   const apagarRecurso = async (id) => {
-    try {
-      const apagarRecurso = await fetch(
-        `http://localhost:8001/recursos/${id}`,
-        {
-          method: "DELETE",
-        }
-      );
+    var confirm = window.confirm("Deseja mesmo excluir ?");
+    if (confirm) {
+      try {
+        const apagarRecurso = await fetch(
+          `http://localhost:8001/recursos/${id}`,
+          {
+            method: "DELETE",
+          }
+        );
 
-      setRecursos(recursos.filter(rec => rec.id_operacao !== id))
-    } catch (e) {
-      console.log(e);
+        setRecursos(recursos.filter((rec) => rec.id_operacao !== id));
+      } catch (e) {
+        console.log(e);
+      }
+    } else {
+      return
     }
   };
 
@@ -44,4 +49,4 @@ const Box = () => {
   ));
 };
 
-export default Box
+export default Box;
