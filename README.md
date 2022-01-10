@@ -3,16 +3,18 @@
 ### Sobre o projeto
 
 Desafio do link (https://github.com/elvenworks/challenges).
-De acordo com a documentação, entendi que era necessário ser feito um CRUD de listagem de recursos, em que todas as informaçoes fossem manipulados a partir de um banco de dados de minha escolha.
+De acordo com a documentação, entendi que era necessário ser feito um CRUD de listagem de recursos, em um modelo cliente-servidor, em que todas as informaçoes fossem armazenadas/manipuladas a partir de um banco de dados de minha escolha.
 
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git], [Node.js],[npm],[postgres]. 
+[Git],[Node.js],[npm],[postgres]. 
 
 ### Clonando repositório
 ```bash
-# Clone este repositório
+# Crie uma pasta para clonar o repositório
+
+# Dentro da pasta criada, clone este repositório
 $ git clone git@github.com:caiobarroso/elvenworks-challenge.git
 ```
 
@@ -50,12 +52,14 @@ $ npm start
 ### 🎲 Configurando banco de dados 
 
 ```bash
-# Antes de tudo, modifique o campo 'password' no arquivo db.js para a sua senha do banco.
+# Antes de tudo, dentro da pasta server, no arquivo db.js modifique o campo 'password' para a sua senha configurada inicialmente no banco.
 
-# Acesse o script de criaçao do banco em database.sql dentro da pasta server
+# Acesse o script de criaçao do banco em database.sql.
 
-# Copie o script
+# Copie o script.
 
-# Execute o script na CMD do banco 
+# Execute o script no CMD do banco.
+
+# Com o Banco de dados criado, e todas as operações feitas acima, o projeto está pronto para ser compilado.
 
 ```
