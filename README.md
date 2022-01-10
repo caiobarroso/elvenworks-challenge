@@ -3,12 +3,12 @@
 ### Sobre o projeto
 
 Desafio do link (https://github.com/elvenworks/challenges).
-De acordo com a documentação, entendi que era necessário ser feito um CRUD de recursos, em que todas as informaçoes
+De acordo com a documentação, entendi que era necessário ser feito um CRUD de listagem de recursos, em que todas as informaçoes fossem manipulados a partir de um banco de dados de minha escolha.
 
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git], [Node.js] e [npm]. 
+[Git], [Node.js],[npm],[postgres]. 
 
 ### Clonando repositório
 ```bash
@@ -37,6 +37,20 @@ $ nodemon
 
 ```bash
 # Acesse a pasta do projeto no terminal/cmd
+
+# Vá para a pasta client
+$ cd client
+
+# Instale as dependências
+$ npm install
+
+# Execute a aplicação 
+$ npm start
+```
+### 🎲 Configurando banco de dados 
+
+```bash
+# Acesse o arquivo bd.js
 
 # Vá para a pasta client
 $ cd client
