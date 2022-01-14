@@ -31,7 +31,7 @@ const Box = () => {
         console.log(e);
       }
     } else {
-      return
+      return;
     }
   };
 
