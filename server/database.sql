@@ -7,6 +7,11 @@ CREATE TABLE information(
     data_operacao DATE NOT NULL
 );
 
+CREATE TABLE tipos(
+    id_tipo SERIAL PRIMARY KEY,
+    tipo VARCHAR(255) NOT NULL
+);
+
 --informacao fake
 INSERT INTO information (nome_operacao, tipo_operacao, data_operacao) 
 VALUES('caio baroso','Host estático','09-01-2022');

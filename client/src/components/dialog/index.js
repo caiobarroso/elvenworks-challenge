@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
@@ -7,6 +7,23 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
 
 export default ({ open, handleClose, submit, onChange, data, title }) => {
+  const [tipos, setTipos] = useState([]);
+
+  const getTipos = async () => {
+    try {
+      const response = await fetch("http://localhost:8001/tipos");
+      const jsonData = await response.json();
+
+      setTipos(jsonData);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  useEffect(() => {
+    getTipos();
+  }, []);
+
   return (
     <Dialog open={open} onClose={handleClose}>
       <DialogTitle>{title}</DialogTitle>
@@ -17,26 +34,24 @@ export default ({ open, handleClose, submit, onChange, data, title }) => {
               type="text"
               placeholder="Nome"
               name="nome"
-              value={data.nome}
               onChange={onChange}
+              autoComplete="off"
             />
           </div>
           <div>
-            <input
-              type="text"
-              placeholder="Tipo"
-              name='tipo'
-              value={data.tipo}
-              onChange={onChange}
-            />
+            <select onChange={onChange} name="tipo">
+              {tipos.map((tipos) => (
+                <option>{tipos.tipo}</option>
+              ))}
+            </select>
           </div>
           <div>
             <input
               type="date"
               placeholder="Data"
-              name='data'
-              value={data.data}
+              name="data"
               onChange={onChange}
+              autoComplete="off"
             />
           </div>
 

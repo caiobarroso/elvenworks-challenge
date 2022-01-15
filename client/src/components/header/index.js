@@ -3,11 +3,6 @@ import "./styles.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-// import Button from "@mui/material/Button";
-// import Dialog from "@mui/material/Dialog";
-// import DialogActions from "@mui/material/DialogActions";
-// import DialogContent from "@mui/material/DialogContent";
-// import DialogTitle from "@mui/material/DialogTitle";
 
 import Modal from "../dialog";
 
@@ -30,18 +25,11 @@ const Header = () => {
     }
   };
 
-  const onChange = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
-    console.log(values);
-  };
+  const onChange = (e) =>
+    setValues({ ...values, [e.target.name] : e.target.value});
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const handleClickOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
     <div className="header">
@@ -54,7 +42,6 @@ const Header = () => {
         handleClose={handleClose}
         title="Cadastrar"
         submit={submit}
-        data={{ ...values }}
         onChange={onChange}
       />
     </div>

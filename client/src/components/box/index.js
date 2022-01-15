@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Celula from "../celula";
+import Header from "../header";
+
+import "./styles.css";
 
 const Box = () => {
   const [recursos, setRecursos] = useState([]);
@@ -39,14 +42,23 @@ const Box = () => {
     getRecursos();
   }, []);
 
-  return recursos.map((rec) => (
-    <Celula
-      nome={rec.nome_operacao}
-      tipo={rec.tipo_operacao}
-      data={rec.data_operacao}
-      deletarRecurso={() => apagarRecurso(rec.id_operacao)}
-    />
-  ));
+  return (
+    <div className="content">
+      <Header />
+      <div className="list-area">
+        {recursos.map((rec) => (
+          <Celula
+            nome={rec.nome_operacao}
+            tipo={rec.tipo_operacao}
+            data={rec.data_operacao}
+            recursos={recursos}
+            deletarRecurso={() => apagarRecurso(rec.id_operacao)}
+            id_operacao={rec.id_operacao}
+          />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Box;

@@ -25,10 +25,10 @@ exports.pegarTodosRecursos = async (req, res) => {
 exports.editarRecurso = async (req, res) => {
   try {
     const { id } = req.params;
-    const { nome_operacao, data_operacao, tipo_operacao } = req.body;
+    const { nome, data, tipo } = req.body;
     const editarRecurso = await pool.query(
       "UPDATE information SET nome_operacao = $1, data_operacao = $2, tipo_operacao = $3 WHERE id_operacao = $4",
-      [nome_operacao, data_operacao, tipo_operacao, id]
+      [nome, data, tipo, id]
     );
 
     res.json("atualizado!");
@@ -47,4 +47,12 @@ exports.deletarRecurso = async (req, res) => {
     } catch (e) {
       console.log(e);
     }
+};
+exports.pegarTodosTipos = async (req, res) => {
+  try {
+    const mostrarTodosTipos = await pool.query("SELECT * from tipos");
+    res.json(mostrarTodosTipos.rows);
+  } catch (e) {
+    console.log(e);
+  }
 };

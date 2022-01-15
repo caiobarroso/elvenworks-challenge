@@ -15,30 +15,3 @@ body {
     align-items: center;
     background-color: gray;
 }
-
-.content {
-    display: flex;
-    flex-direction: column;
-    height: 500px;
-    width: 700px;
-    background-color: white;
-}
-
-.list-area {
-    display: inline-block;
-    flex: 1;
-    justify-content: center;
-    max-height: 410px;
-    margin-left: 10px;
-    margin-right: 10px;
-    overflow-y: auto;
-}
-
-.list-area::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-
-.list-area::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
-}
