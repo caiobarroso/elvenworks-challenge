@@ -6,6 +6,8 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
 
+import "./styles.css";
+
 export default ({ open, handleClose, submit, onChange, data, title }) => {
   const [tipos, setTipos] = useState([]);
 
@@ -39,7 +41,10 @@ export default ({ open, handleClose, submit, onChange, data, title }) => {
             />
           </div>
           <div>
-            <select onChange={onChange} name="tipo">
+            <select onChange={onChange} name="tipo" id="custom-select">
+              <option disabled selected>
+                selecione uma opção
+              </option>
               {tipos.map((tipos) => (
                 <option>{tipos.tipo}</option>
               ))}
