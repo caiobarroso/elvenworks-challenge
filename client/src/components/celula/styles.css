@@ -43,3 +43,10 @@
   width: 50px;
   color: black;
 }
+
+.btn-area #edit-btn:hover {
+  background-color: rgb(216, 216, 23);
+}
+.btn-area #delete-btn:hover {
+  background-color: rgb(170, 57, 57);
+}

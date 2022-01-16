@@ -33,9 +33,8 @@ const Box = () => {
       } catch (e) {
         console.log(e);
       }
-    } else {
-      return;
     }
+    return;
   };
 
   useEffect(() => {
@@ -51,7 +50,7 @@ const Box = () => {
             nome={rec.nome_operacao}
             tipo={rec.tipo_operacao}
             data={rec.data_operacao}
-            recursos={recursos}
+            recurso={rec}
             deletarRecurso={() => apagarRecurso(rec.id_operacao)}
             id_operacao={rec.id_operacao}
           />

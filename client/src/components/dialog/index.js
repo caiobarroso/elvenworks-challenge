@@ -26,6 +26,9 @@ export default ({ open, handleClose, submit, onChange, data, title }) => {
     getTipos();
   }, []);
 
+
+  console.log(data)
+
   return (
     <Dialog open={open} onClose={handleClose}>
       <DialogTitle>{title}</DialogTitle>
@@ -38,10 +41,11 @@ export default ({ open, handleClose, submit, onChange, data, title }) => {
               name="nome"
               onChange={onChange}
               autoComplete="off"
+              value={data.nome_operacao}
             />
           </div>
           <div>
-            <select onChange={onChange} name="tipo" id="custom-select">
+            <select onChange={onChange} name="tipo" id="custom-select" value={data.tipo_operacao}>
               <option disabled selected>
                 selecione uma opção
               </option>
@@ -57,6 +61,7 @@ export default ({ open, handleClose, submit, onChange, data, title }) => {
               name="data"
               onChange={onChange}
               autoComplete="off"
+              value={data.data_operacao}
             />
           </div>
 

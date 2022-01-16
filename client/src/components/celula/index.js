@@ -5,7 +5,7 @@ import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 
 import Modal from "../dialog";
 
-const Celula = ({ nome, tipo, data, deletarRecurso, id_operacao }) => {
+const Celula = ({ nome, tipo, data, deletarRecurso, id_operacao, recurso }) => {
   const [open, setOpen] = useState(false);
 
   const [newValues, setNewValues] = useState({ nome: "", tipo: "", data: "" });
@@ -27,6 +27,8 @@ const Celula = ({ nome, tipo, data, deletarRecurso, id_operacao }) => {
     }
   };
 
+  const calendario = new Date(data) 
+
   const onChange = (e) =>
     setNewValues({ ...newValues, [e.target.name]: e.target.value });
 
@@ -38,7 +40,7 @@ const Celula = ({ nome, tipo, data, deletarRecurso, id_operacao }) => {
       <div className="info">
         <h1>{nome} - </h1>
         <h1>{tipo} - </h1>
-        <h1> {data.substr(0, 10)} </h1>
+        <h1> {calendario.toLocaleDateString('pt-br')} </h1>
       </div>
       <div className="btn-area">
         <button id="edit-btn">
@@ -53,6 +55,7 @@ const Celula = ({ nome, tipo, data, deletarRecurso, id_operacao }) => {
           title="Editar"
           submit={() => editarRecurso(id_operacao)}
           onChange={onChange}
+          data={recurso}
         />
       </div>
     </div>
