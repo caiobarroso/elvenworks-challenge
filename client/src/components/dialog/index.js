@@ -35,14 +35,14 @@ export default ({ open, handleClose, submit, onChange, data, title }) => {
             <input
               type="text"
               placeholder="Nome"
-              name="nome"
+              name="nome_operacao"
               onChange={onChange}
               autoComplete="off"
               defaultValue={data.nome_operacao}
             />
           </div>
           <div>
-            <select onChange={onChange} name="tipo" id="custom-select" defaultValue={data.tipo_operacao}>
+            <select onChange={onChange} name="tipo_operacao" id="custom-select" defaultValue={data.tipo_operacao}>
               <option disabled selected>
                 selecione uma opção
               </option>
@@ -55,7 +55,7 @@ export default ({ open, handleClose, submit, onChange, data, title }) => {
             <input
               type="date"
               placeholder="Data"
-              name="data"
+              name="data_operacao"
               onChange={onChange}
               autoComplete="off"
             />

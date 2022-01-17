@@ -8,7 +8,7 @@ import Modal from "../dialog";
 const Celula = ({ nome, tipo, data, deletarRecurso, id_operacao, recurso }) => {
   const [open, setOpen] = useState(false);
 
-  const [newValues, setNewValues] = useState({ nome: "", tipo: "", data: "" });
+  const [newValues, setNewValues] = useState(recurso);
 
   const editarRecurso = async (id_operacao) => {
     try {
@@ -34,6 +34,8 @@ const Celula = ({ nome, tipo, data, deletarRecurso, id_operacao, recurso }) => {
 
   const handleClickOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  
+  console.log(newValues)
 
   return (
     <div className="celula">
