@@ -63,3 +63,4 @@ $ npm start
 # Com o Banco de dados criado, e todas as operações feitas acima, o projeto está pronto para ser compilado.
 
 ```
+https://user-images.githubusercontent.com/49173134/149841945-2b56cf71-c023-4e0f-b16d-359517691422.mp4
