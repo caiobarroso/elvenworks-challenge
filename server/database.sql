@@ -15,3 +15,8 @@ CREATE TABLE tipos(
 --informacao fake
 INSERT INTO information (nome_operacao, tipo_operacao, data_operacao) 
 VALUES('caio baroso','Host estático','09-01-2022');
+
+INSERT INTO tipos (tipo) VALUES ('API');
+INSERT INTO tipos (tipo) VALUES ('Software');
+INSERT INTO tipos (tipo) VALUES ('Host Estático');
+INSERT INTO tipos (tipo) VALUES ('Database');
