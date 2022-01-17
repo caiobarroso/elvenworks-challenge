@@ -9,7 +9,11 @@ import Modal from "../dialog";
 const Header = () => {
   const [open, setOpen] = useState(false);
 
-  const [values, setValues] = useState({ nome_operacao: "", data_operacao: "", tipo_operacao: "" });
+  const [values, setValues] = useState({
+    nome_operacao: "",
+    data_operacao: "",
+    tipo_operacao: "",
+  });
 
   const submit = async (e) => {
     try {

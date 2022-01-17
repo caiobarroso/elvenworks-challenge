@@ -27,22 +27,22 @@ const Celula = ({ nome, tipo, data, deletarRecurso, id_operacao, recurso }) => {
     }
   };
 
-  const calendario = new Date(data) 
+  const calendario = new Date(data);
 
   const onChange = (e) =>
     setNewValues({ ...newValues, [e.target.name]: e.target.value });
 
   const handleClickOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  
-  console.log(newValues)
+
+  console.log(newValues);
 
   return (
     <div className="celula">
       <div className="info">
         <h1>{nome} - </h1>
         <h1>{tipo} - </h1>
-        <h1> {calendario.toLocaleDateString('pt-br')} </h1>
+        <h1> {calendario.toLocaleDateString("pt-br")} </h1>
       </div>
       <div className="btn-area">
         <button id="edit-btn">

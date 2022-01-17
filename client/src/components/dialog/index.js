@@ -42,10 +42,13 @@ export default ({ open, handleClose, submit, onChange, data, title }) => {
             />
           </div>
           <div>
-            <select onChange={onChange} name="tipo_operacao" id="custom-select" defaultValue={data.tipo_operacao}>
-              <option disabled selected>
-                selecione uma opção
-              </option>
+            <select
+              onChange={onChange}
+              name="tipo_operacao"
+              id="custom-select"
+              defaultValue={data.tipo_operacao}
+            >
+              <option disabled>selecione uma opção</option>
               {tipos.map((tipos) => (
                 <option>{tipos.tipo}</option>
               ))}
@@ -58,6 +61,7 @@ export default ({ open, handleClose, submit, onChange, data, title }) => {
               name="data_operacao"
               onChange={onChange}
               autoComplete="off"
+              defaultValue={data.data_operacao}
             />
           </div>
 
